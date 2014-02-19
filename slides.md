@@ -1,3 +1,4 @@
+
 ## Agenda
 
 1. whoami
@@ -103,17 +104,17 @@ Not all the data will be easily available via CQL, the indices maintained by the
 
 [View Full Source](https://github.com/bflorian/cassandra-astyanax/blob/4027cb6589ce85b6bad90a8d0d3a917a39a66e48/test/data/schema.txt)
 
-  create column family User
+    create column family User
       with comparator=UTF8Type
       and column_metadata=[
-          {column_name: id, validation_class: UTF8Type},
-          {column_name: city, validation_class: UTF8Type, index_type: KEYS},
-          {column_name: state, validation_class: UTF8Type, index_type: KEYS},
-          {column_name: zip, validation_class: UTF8Type, index_type: KEYS},
-          {column_name: e164phone, validation_class: UTF8Type, index_type: KEYS}
-      ];
+        {column_name: id, validation_class: UTF8Type},
+        {column_name: city, validation_class: UTF8Type, index_type: KEYS},
+        {column_name: state, validation_class: UTF8Type, index_type: KEYS},
+        {column_name: zip, validation_class: UTF8Type, index_type: KEYS},
+        {column_name: e164phone, validation_class: UTF8Type, index_type: KEYS}
+    ];
 
-  create column family User_CTR
+    create column family User_CTR
       with comparator = UTF8Type
       and default_validation_class = CounterColumnType;
 
